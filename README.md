@@ -7,7 +7,7 @@ Me dejó ver la dificultad de montar un proyecto medianamente "grande" (que de t
 ## Features que me gustaría agregar en un futuro
 
 - Poder tener miembros de grupo que no sean usuarios: deberia cambiar el modelado de la BDD, cambiar como es la aceptación de una invitación ahora mismo, entre otras cosas.
-- Carga de fotos por usuarios, o utilización de fotos predeterminadas (estilo Netflix): si es la segunda opción, no debe:ia ser algo muy complicado, en un rato lo podría hacer.
+- Carga de fotos por usuarios, o utilización de fotos predeterminadas (estilo Netflix): si es la segunda opción, no deberia ser algo muy complicado, en un rato lo podría hacer.
 - Pago a través de billeteras virtuales: feature más ambiciosa, entiendo que ligarlo a MP no debería ser **tan** complicado pero ya veremos.
 - Elegir divisa del gasto: una pavada en principio.
 - Creación y manejo de eventos (único gasto asociado a un grupo de gente): feature también ambiciosa pero por el hecho de tener que dedicarle un tiempo que hoy mismo no tengo.
