@@ -12,4 +12,4 @@ y ahi corres
 
 uvicorn main:app --reload
 
-2. Te paras sobre la carpeta /frontend y corres con ´npm run dev´
+2. Te paras sobre la carpeta /frontend y corres con `npm run dev`
