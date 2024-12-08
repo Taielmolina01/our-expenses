@@ -1,0 +1,57 @@
+.subcontainer-first-section {
+    width: 60%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.animated-title {
+    font-size: 40px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.button-landing {
+    align-self: flex-start;
+}
+
+.link-landing {
+    align-self: flex-start;
+}
+
+.container-first-section {
+    display: flex;
+    flex-direction: row;
+    font-size: larger;
+}
+
+.container-first-section img {
+    height: 50%;
+    border: 1px solid var(--button-background-color);
+}
+
+.text-body {
+    font-size: 17px;
+}
+
+@media (max-width: 800px) {
+    .container-first-section {
+        flex-direction: column; /* Cambia a columna si el ancho es menor a 800px */
+        justify-content: center; /* Centra el contenido en la pantalla */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .subcontainer-first-section {
+        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+        align-items: center; /* Centra el contenido en la columna */
+        min-height: fit-content;
+    }
+
+    .container-first-section img {
+        width: 80%; /* Ajusta el tamaño de la imagen */
+        margin-top: 20px; /* Agrega un margen superior para separar la imagen del texto */
+    }
+}

@@ -1,0 +1,8 @@
+date-fns
+chart.js
+react-chartjs-2
+@mui/x-data-grid
+@mui/x-charts
+react-heatmap-grid
+react-apexcharts
+apexcharts

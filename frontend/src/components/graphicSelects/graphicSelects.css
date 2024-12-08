@@ -1,0 +1,38 @@
+.selects-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 60%;
+    align-items: center;
+    justify-self: center;
+}
+
+select {
+    width: 100%;
+}
+
+select option {
+    color: white !important;
+    background-color: #000306;
+    border: 3px solid #505050;
+}
+
+
+select option[selected] {
+    color: #505050;
+    background-color: #505050;
+    border: 3px solid #505050;
+}
+
+.graphic-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphic-container h3 {
+    padding: 0;
+    margin: 0;
+}

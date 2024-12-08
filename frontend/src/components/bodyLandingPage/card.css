@@ -1,0 +1,36 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 10px;
+    flex: 1;
+    background-color: #141414;
+    border: 1px solid var(--button-background-color);
+    font-size: larger;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+}
+
+.card h4 {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+@media (max-width: 800px) {
+    .cards-container {
+        display: flex;
+        gap: 20px;
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra las tarjetas */
+    }
+}

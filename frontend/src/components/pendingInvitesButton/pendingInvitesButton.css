@@ -1,0 +1,71 @@
+.pending-invites-container{
+    background-color: #001913;
+    border: 1px solid #03624C;
+    border-radius: 10px;
+}
+
+.pending-invite{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.pending-invites-button {
+    color: #505050;
+    background-color: var(--button-hover-background-color);
+    border: 0;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-right: 0;
+}
+
+.pending-invites-button:hover {
+    background-color: var(--button-background-color);
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.pending-invites-button.pending {
+    background-color: rgba(255, 217, 0, 0.884); 
+    color: white;
+}
+
+.pending-invites-button.pending:hover {
+    background-color: rgba(255, 217, 0, 0.295); 
+}
+
+.pending-invites-button:disabled {
+    color: #5050506e;
+    background-color: var(--button-desactivate-background-color);
+    border: 0;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-right: 0;
+    cursor: not-allowed;
+}
+
+.btn-accept{
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.btn-reject{
+    padding: 10px;
+    background-color: #DD0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 4px;
+}

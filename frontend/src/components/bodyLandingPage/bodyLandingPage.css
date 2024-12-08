@@ -1,0 +1,52 @@
+.not-signed-background {
+  display: flex;
+  flex-grow: 1;
+  background: linear-gradient(0deg, var(--navbar-background-color) 70%, var(--button-background-color) 100%);
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+} 
+
+@media (max-width: 800px){
+  .animated-title {
+    margin-top: 30px;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-cards {
+  align-self: center;
+  justify-self: center;
+  font-size: larger;
+}
+
+.cards-section {
+  height: fit-content;
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+.cards-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5%; 
+  justify-content: space-around;
+  width: 100%;
+}
+
+.section-landing-page {
+  margin: 5% 0;
+}
+
+.app-container {
+  background-color: var(--background-color);
+}

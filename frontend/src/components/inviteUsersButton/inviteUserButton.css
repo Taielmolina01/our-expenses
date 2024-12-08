@@ -1,0 +1,29 @@
+form {
+    border: none;
+}
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.invite-user-button {
+    background-color: var(--button-background-color);
+    border: 0;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-left: 20px;
+    color: var(--button-text-color);
+}
+
+.invite-user-button:hover {
+    background-color: var(--button-hover-background-color);
+    cursor: pointer;
+}
+
+.create-user-invitation-container {
+    border: 1px solid var(--button-background-color);
+    border-radius: 10px;
+    overflow: hidden;
+}

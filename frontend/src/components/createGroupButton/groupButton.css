@@ -1,0 +1,77 @@
+.button-and-more-container {
+    display: flex;
+}
+
+.btn-close-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.btn-close {
+    background-color: var(--footer-background-color);
+    color: white;
+    border: 0;
+    font-weight: bold;
+    font-size: large;
+    justify-self: end;
+    border: 1px solid var(--button-background-color);
+    border-radius: 5px;
+}
+
+.btn-close:hover {
+    cursor: pointer;
+}
+
+.btn {
+    padding: 10px;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+  }
+  
+.btn:hover {
+    background-color: var(--button-hover-background-color);
+    cursor: pointer;
+    border: none;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-cancel {
+    border: none;
+    margin-top: 10px;
+    color: var(--button-background-color);
+    background-color: whitesmoke;
+    border: 1px solid var(--button-background-color);
+    border-radius: 5px;
+}
+
+.btn-cancel:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.create-group {
+    background-color: var(--button-background-color);
+    border: 0px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-right: 20px;
+    color: white;
+}
+  
+.create-group:hover {
+    background-color: var(--button-hover-background-color);
+    cursor: pointer;
+}

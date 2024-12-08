@@ -1,0 +1,32 @@
+.body-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--background-color);
+}
+
+.body-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 15px;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.display-container {
+    background-color: var(--background-color);
+}
+
+.body-title h3 {
+    grid-column: 2;
+}
+
+h3 {
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color) !important;
+}

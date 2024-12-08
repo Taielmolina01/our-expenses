@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  font-family: "Poppins";
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+input {
+  color: var(--input-color);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* Mantiene la relación de aspecto */
+}
+
+.apexcharts-tooltip, .apexcharts-xaxistooltip {
+  background-color: var(--background-color) !important; /* Cambia el color de fondo */
+}
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.body-container {
+  display: flex;
+  padding-bottom: 20px;
+  background-color: var(--background-color);
+}
+
+:root {
+  --navbar-background-color: #000306;
+  --background-color: #000306;
+  --navbar-color: white;
+  --button-background-color: #03624C;
+  --button-hover-background-color: #032221;
+  --button-desactivate-background-color: #0322211f;
+  --footer-background-color: #001913;
+  --text-color: white;
+  --button-text-color: white;
+  --input-color: black;
+  --search-bar-border-color: #505050;
+  --search-bar-focus-color: #ffffff8e;
+  --display-option-background-color: #032221;
+  --display-active-option-background-color: #3e797873;
+}
+
+.light-mode {
+  --navbar-background-color: #f1f1f1;
+  --background-color: white;
+  --navbar-color: black;
+  --button-background-color: #31ca43;
+  --button-hover-background-color: #14a325;
+  --button-desactivate-background-color: #14a3253d;
+  --footer-background-color: #f1f1f1;
+  --text-color: black;
+  --button-text-color: white;
+  --input-color: black;
+  --search-bar-border-color: #50505042;
+  --search-bar-focus-color: #1b1b1b86;
+  --display-option-background-color: #3bcc4ccc;
+  --display-active-option-background-color: #14a325;
+}
+
+nav {
+  background-color: var(--navbar-background-color);
+  color: var(--navbar-color);
+  flex-direction: row;
+  display: flex;
+  min-height: 45px;
+  padding: 1rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-home {
+  border-bottom: 1px solid var(--button-background-color);
+}
+
+.enterprise-name {
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.on-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.sign-in, .sign-up {
+  background-color: var(--button-background-color);
+  border: 0px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-right: 20px;
+  color: var(--text-color);
+}
+
+@media (max-width: 500px) {
+  .sign-in, .sign-up {
+    margin-right: 5px;
+  }
+}
+
+
+.sign-in:hover, .sign-up:hover {
+  background-color: var(--button-hover-background-color);
+  cursor: pointer;
+}
+
+.sign-up {
+  background-color: var(--background-color);
+  border: 2px solid var(--button-background-color)
+}
+
+.sign-up:hover {
+  background-color: var(--button-background-color);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body-home {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+.text-container p {
+  margin: 10px 0;
+}
+
+footer {
+  border-top: 1px solid var(--button-background-color);
+  padding: 20px 0;
+  background-color: var(--footer-background-color);
+  color: var(--text-color);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-shrink: 0; /* Asegura que el footer no se reduzca si hay poco contenido */
+}
+
+.footer-not-landing {
+  align-items: center;
+  padding: 25px 0;
+  display: flex;
+  height: max-content;
+}
+
+.about-us {
+  width: 30%;
+}
+
+footer div {
+  margin: 10px 0;
+}
+
+ul {
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  display: flex;
+}
+
+.about-us div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.help div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+ul li p {
+  padding: 0 15px;
+}
+
+h3 {
+  font-size: large;
+}
+
+footer div h2 {
+  font-weight: bolder;
+}
+
+section h3 {
+  color: white;
+  margin-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(0deg, var(--navbar-background-color) 60%, var(--button-background-color) 100%);
+  align-items: center;
+  flex-grow: 1;
+}
+
+form {
+  padding: 20px 40px;
+  border: 1px solid var(--button-background-color);
+  background-color: var(--footer-background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+form p {
+  margin-top: 6px;
+  align-self: center;
+}
+
+form input {
+  border: 1px solid rgb(70, 69, 69)8e;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.btn, .btn-disabled {
+  height: 40px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 5px 0;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-background-color);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-disabled {
+  background-color: #cccccc;
+  color: #666666;
+  border: none;
+  margin-top: 10px;
+  padding: 5px 0;
+  cursor: not-allowed;
+}
+
+.groups {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.icon {
+  align-self: center;
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.members:hover .member-icon,
+.members:hover .member-name {
+  color: lightgrey;
+}
+
+.footer-link:hover {
+  color: lightgrey;
+}

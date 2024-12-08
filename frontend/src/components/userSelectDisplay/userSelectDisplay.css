@@ -1,0 +1,221 @@
+.editable-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.editable-text {
+    padding: 5px;
+    width: 250px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.display-table-user {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.editable-input {
+    padding: 5px;
+    width: 250px;
+    background-color: #fff;
+    border: var(--button-background-color);
+    outline: none;
+}
+
+.editable-input:focus {
+    border-color: var(--button-background-color);
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.toggle-button {
+    padding: 10px;
+    width: 70px;
+    background-color: var(--button-background-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+.toggle-button:hover {
+    background-color: var(--button-hover-background-color);
+    cursor: pointer;
+    border: none;
+}
+
+.submit-button {
+    margin-top: 10px;
+    padding: 5px 0;
+    background-color: var(--button-background-color);
+    color: white;
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: var(--button-hover-background-color);
+    cursor: pointer;
+}
+
+
+.cancel-button {
+    border: none;
+    color: var(--button-background-color);
+    background-color: whitesmoke;
+    padding: 5px 0;
+    border: 1px solid var(--button-background-color);
+    border-radius: 5px;
+}
+
+.cancel-button:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.password-button {
+    padding: 10px;
+    width: 300px;
+    background-color: var(--button-background-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+
+.password-button:hover {
+    background-color: var(--button-hover-background-color);
+    cursor: pointer;
+    border: none;
+}
+
+.profile-table {
+    table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-tabe .label-cell {
+    width: 50px;
+}
+
+.profile-table .data-cell {
+    padding: 10px;
+    width: 250px;
+    text-align: left;
+}
+
+.profile-table .button-cell {
+    width: 150px;
+    text-align: left;
+}
+
+.password-section {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+}
+
+.password-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+    margin-right: 140px;
+}
+
+.password-dots-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; 
+}
+
+.toggle-button-pass {
+    padding: 10px;
+    width: 500px;
+    background-color: var(--button-background-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.Modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.Modal-content {
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input, select, option, select:focus, select:focus option {
+    color: black;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toggle-button-pass:hover {
+    background-color: var(--button-hover-background-color);
+    cursor: pointer;
+}
+
+.overlay-pass-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-inputs label {
+    align-self: flex-start;
+}
+
+.profile-table-super-container {
+    margin: auto;
+    width: 50%;
+}
+
+.payments-user-table-super-container {
+    margin: auto;
+    width: 70%;
+}
+
+.debts-user-table-super-container {
+    margin: auto;
+    width: 80%;
+}
+
+@media(max-width: 600px) {
+    .profile-table-super-container {
+        width: 80%;
+    }
+    
+    .payments-user-table-super-container{
+        width: 80%;
+    }
+}
