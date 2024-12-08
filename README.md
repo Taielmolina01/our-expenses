@@ -28,6 +28,9 @@ recien ahi instalas dependencias con
 
 `pip install -r requirements.txt`
 
+# App en uso
+
+insert fotos
 y ahi corres
 
 `uvicorn main:app --reload`
