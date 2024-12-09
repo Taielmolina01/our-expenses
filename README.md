@@ -1,6 +1,6 @@
 # Notas
 
-Proyecto realizado a lo largo de todo el cuatri, en su gran mayoría realice el código por mi cuenta, con numerosos aportes de mi amigo @Joaco (dsp lo pineo)
+Proyecto realizado a lo largo de todo el cuatri, en su mayoría realice el código por mi cuenta, con numerosos aportes de mi amigo @Joaco (dsp lo pineo)
 
 Me dejó ver la dificultad de montar un proyecto medianamente "grande" (que de todas formas está lejos de serlo)
 
@@ -28,11 +28,12 @@ recien ahi instalas dependencias con
 
 `pip install -r requirements.txt`
 
-# App en uso
-
-insert fotos
 y ahi corres
 
 `uvicorn main:app --reload`
 
 2. Te paras sobre la carpeta /frontend y corres con `npm run dev`
+
+# App en uso
+
+insert fotos
