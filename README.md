@@ -38,6 +38,8 @@ y ahi corres
 
 # App en uso
 
+Dejo algunas screens de como se ve la app funcionando
+
 ![Captura desde 2024-12-09 22-42-15](https://github.com/user-attachments/assets/9eb9d70c-5d60-4f23-8063-e91be982f246)
 
 ![Captura desde 2024-12-09 22-42-08](https://github.com/user-attachments/assets/73c8d741-ca36-4434-ac5d-75043cb03429)
