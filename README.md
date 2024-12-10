@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6678360b-0c0c-454f-9eca-48ee06d9f989)# Notas
+# Notas
 
 Proyecto realizado a lo largo de todo el cuatri, en su mayoría realice el código por mi cuenta con mi amigo [Joaco](https://github.com/BA73C0) (siendo que era un tp de a 5)
 
@@ -38,4 +38,17 @@ y ahi corres
 
 # App en uso
 
-insert fotos
+![Captura desde 2024-12-09 22-42-15](https://github.com/user-attachments/assets/9eb9d70c-5d60-4f23-8063-e91be982f246)
+
+![Captura desde 2024-12-09 22-42-08](https://github.com/user-attachments/assets/73c8d741-ca36-4434-ac5d-75043cb03429)
+
+![Captura desde 2024-12-09 22-42-22](https://github.com/user-attachments/assets/20ba4068-72cb-463d-811f-76b75935fede)
+
+![Captura desde 2024-12-09 22-42-33](https://github.com/user-attachments/assets/0f579fc5-14d3-445c-9a38-cb2f47a39624)
+
+![Captura desde 2024-12-09 22-42-56](https://github.com/user-attachments/assets/7e2d7964-1312-4586-86eb-ebdfdc249fb2)
+
+![Captura desde 2024-12-09 22-42-45](https://github.com/user-attachments/assets/e1fedbe5-1efd-4a3f-bdd4-eb246703db76)
+
+![Captura desde 2024-12-09 22-43-17](https://github.com/user-attachments/assets/21255be5-9cf0-435f-888d-5ce0c050e408)
+
