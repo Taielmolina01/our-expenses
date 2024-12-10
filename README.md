@@ -1,6 +1,6 @@
-# Notas
+![image](https://github.com/user-attachments/assets/6678360b-0c0c-454f-9eca-48ee06d9f989)# Notas
 
-Proyecto realizado a lo largo de todo el cuatri, en su mayoría realice el código por mi cuenta, con numerosos aportes de mi amigo @Joaco (dsp lo pineo)
+Proyecto realizado a lo largo de todo el cuatri, en su mayoría realice el código por mi cuenta con mi amigo [Joaco](https://github.com/BA73C0) (siendo que era un tp de a 5)
 
 Me dejó ver la dificultad de montar un proyecto medianamente "grande" (que de todas formas está lejos de serlo)
 
@@ -11,6 +11,8 @@ Me dejó ver la dificultad de montar un proyecto medianamente "grande" (que de t
 - Pago a través de billeteras virtuales: feature más ambiciosa, entiendo que ligarlo a MP no debería ser **tan** complicado pero ya veremos.
 - Elegir divisa del gasto: una pavada en principio.
 - Creación y manejo de eventos (único gasto asociado a un grupo de gente): feature también ambiciosa pero por el hecho de tener que dedicarle un tiempo que hoy mismo no tengo.
+
+También me gustaría meter mano y emprolijar y formatear el código, ya que en ciertas partes quedó medio un asco, además de terminar de testear la API.
 
 # Aclaración
 
