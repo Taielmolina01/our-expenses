@@ -20,6 +20,8 @@ Navegar hasta estar dentro de la carpeta del proyecto y ejecutar
 &&
 `npm install` || `yarn install`
 
+En caso de cambiar el puerto donde se corre el backend deberías actualizar el archivo .env
+
 Finalmente correr
 
 `npm run dev` 

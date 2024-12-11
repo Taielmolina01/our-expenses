@@ -59,6 +59,10 @@ Instalar las dependencias
 
 #### Paso 4
 
+Generar un archivo .env con los mismos datos, o cambiando a gusto los proporcionados en .env.mock
+
+#### Paso 4
+
 Ejecutar
 
 `uvicorn main:app --reload`
