@@ -29,7 +29,7 @@ function SignUp() {
         const password = formData.get(namePassword);
 
         if (password !== formData.get(nameConfirmPassword)) {
-            setError('Las contraseñas no coinciden');
+            setError('Passwords do not match');
             return;
         }
         

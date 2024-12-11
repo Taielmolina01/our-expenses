@@ -8,9 +8,6 @@
     - [ ] Agregar test de pasar mal fecha, y de todo lo que falte
 - [ ] Problemas API
     - [ ] Si agrego una deuda con q alguien paga 0, no deberia generarse 
-    - [X]  Traducir errores a ingles
-    - [X] Tengo que agregar endpoint para deudas por grupo
-    - [X] Agregar campos para updatear usuario
     - [ ] Agregar más errores, por ejemplo que un usuario puede agregar a otro a un grupo, solo si pertenece al grupo, solo si esta logeado, etc. REVISAR CODIGO
     - [ ] Corregir status code de errores lanzados
 
@@ -20,26 +17,66 @@
 
 ## RUN
 
-Tenes que tener el .venv activado  con
+Hay que tener python instalado
+### WINDOWS
+#### Paso 1
 
-`source venv/bin/activate` 
+Navegar hasta estar dentro de la carpeta del proyecto y ejecutar
 
-recien ahi instalas dependencias con
+`python -m venv .venv` 
+
+para crear un entorno virtual
+
+#### Paso 2
+
+Activar el entorno creado
+
+`.venv\Scripts\activate` 
+
+### LINUX
+
+#### Paso 1
+
+Navegar hasta estar dentro de la carpeta del proyecto y ejecutar
+
+`python3 -m venv .venv` 
+
+para crear un entorno virtual
+
+#### Paso 2
+
+Activar el entorno creado
+
+`source .venv/bin/activate` 
+
+### igual para ambos OS
+
+#### Paso 3
+
+Instalar las dependencias
 
 `pip install -r requirements.txt`
 
-y ahi corres
+#### Paso 4
+
+Ejecutar
 
 `uvicorn main:app --reload`
 
+para iniciar el servidor
+
+#### Paso 5
+
+Para cerrar el entorno virtual al finalizar, ejecutar 
+
+`deactivate`
+
 ## TEST
 
-Te paras sobre la carpeta padre y corres
+Navegar hasta estar dentro de la carpeta del proyecto y ejecutar
 
-`pytest`
+`pytest` 
 
-si queres correr uno en particular es
+Para ejecutar uno en particular ejecutar
 
 `pytest tests/test_a_probar.py`
-
-

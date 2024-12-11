@@ -27,7 +27,7 @@ async def create_user_in_group(group_id: int,
     except UserNotRegisteredInGroup as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
 
 @router.get("/groups/{group_id}/users")
 async def get_users_by_group(group_id: int,
@@ -38,7 +38,7 @@ async def get_users_by_group(group_id: int,
     except GroupNotRegistered as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
     
 @router.get("/groups/{group_id}/users/data")
 async def get_users_data_by_group(group_id: int, 
@@ -55,7 +55,7 @@ async def get_groups_by_user(user_email: str,
     except UserNotRegistered as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
     
 @router.get("/users/{user_email}/groups/data")
 async def get_groups_data_by_user(user_email: str, 
@@ -77,7 +77,7 @@ async def get_user_in_group(user_email: str,
     except UserNotRegisteredInGroup as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
 
 @router.put("/groups/{group_id}/users/{user_email}")
 async def update_user_in_group(balance_update: UserInGroupUpdate,
@@ -92,7 +92,7 @@ async def update_user_in_group(balance_update: UserInGroupUpdate,
     except UserNotRegisteredInGroup as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
 
 @router.post("/groups/{group_id}/users/{user_email}")
 async def delete_user_in_group(group_id: int,
@@ -109,4 +109,4 @@ async def delete_user_in_group(group_id: int,
     except UserNotRegisteredInGroup as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")

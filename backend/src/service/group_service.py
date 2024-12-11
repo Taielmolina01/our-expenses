@@ -23,7 +23,7 @@ class GroupService:
 
     async def create_group(self,
                      group: GroupModel) -> GroupBase:
-        if not group.name:
+        if not group.name or not group.name.strip():
             raise GroupWithoutName()
         return await self.group_repository.create_group(create_group_from_model(group))
 
@@ -39,7 +39,7 @@ class GroupService:
                     group_update: GroupUpdate) -> GroupBase:
         group = await self.get_group(group_id)
         if group_update.name is not None:
-            if group_update.name == "":
+            if not group_update.name.strip():
                 raise GroupWithoutName()
             group.name = group_update.name
         return await self.group_repository.update_group(group)

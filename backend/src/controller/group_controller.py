@@ -25,7 +25,7 @@ async def create_group(group: GroupModel,
     except GroupWithoutName as e:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
     
 @router.get("/groups/{group_id}")
 async def get_group(group_id: int,
@@ -36,7 +36,7 @@ async def get_group(group_id: int,
     except GroupNotRegistered as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
 
 @router.put("/groups/{group_id}")
 async def update_group(group_id: int,
@@ -50,7 +50,7 @@ async def update_group(group_id: int,
     except GroupWithoutName as e:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
 
 @router.delete("/groups/{group_id}")
 async def delete_group(group_id: int,
@@ -63,4 +63,4 @@ async def delete_group(group_id: int,
     except UserNotAuthorized as e:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")

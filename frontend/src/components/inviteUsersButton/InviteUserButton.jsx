@@ -41,19 +41,10 @@ function InviteUserButton({ groupID }) {
                 cache: "no-store",
             });
             
+            let result = await response.json();
+
             if (!response.ok) {
-                switch (response.status) {
-                    case 400:
-                        throw new Error('User already in group');
-                    case 401:
-                        throw new Error('Session expired. Please log in again');
-                    case 404:
-                        throw new Error('User not registered');
-                    case 500:
-                        throw new Error('Server error. Please try again later.');
-                    default:
-                        throw new Error('An unknown error occurred.');
-                }
+                throw new Error(result.detail);
             }
 
             setUserEmail('');
@@ -89,7 +80,7 @@ function InviteUserButton({ groupID }) {
                                         Friend email
                                     </label>
                                     <input
-                                        type="text"
+                                        type="email"
                                         value={userEmail}
                                         onChange={(e) => {
                                             setError('')

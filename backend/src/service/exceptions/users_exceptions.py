@@ -1,5 +1,5 @@
 MESSAGE_USER_NOT_REGISTERED = "User with email {user_email} is not registered"
-MESSAGE_USER_HAVE_NOT_NAME = "Username cannot be empty"
+MESSAGE_USER_HAVE_NOT_NAME = "Username can not be empty"
 MESSAGE_USER_ALREADY_REGISTERED = "User with email {user_email} is already registered"
 MESSAGE_WRONG_PASSWORD = "Wrong password"
 MESSAGE_PASSWORD_CANT_BE_EMPTY = "Password cannot be empty"

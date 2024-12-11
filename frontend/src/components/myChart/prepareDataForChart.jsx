@@ -87,7 +87,6 @@ export function PrepareDebtsDataForBarplotByGroup(debts) {
   );
 
   const amountsByGroup = userDebts.reduce((acc, debt) => {
-    console.log(debt)
     acc[debt.group_name] = (acc[debt.group_name] || 0) + debt.calculated_amount;
     return acc;
   }, {});
@@ -108,8 +107,6 @@ export function PrepareDebtsDataForBarplotByGroup(debts) {
 }
 
 export function PrepareDataforBarplotByCategoryByGroup(payments) {
-  console.log(payments)
-
   const allCategories = Array.from(new Set(payments.map((p) => p.category)));
   const allGroupIds = Array.from(new Set(payments.map((p) => p.group_id)));
   const allGroupNames = Array.from(new Set(payments.map((p) => p.group_name)));
@@ -119,8 +116,6 @@ export function PrepareDataforBarplotByCategoryByGroup(payments) {
       payments.filter((p) => p.group_id === group_id && p.category === category).length
     )
   );
-
-  console.log(allGroupNames);  
 
   const series = allGroupIds.map((group_id, rowIndex) => ({
     name: allGroupNames[rowIndex], 

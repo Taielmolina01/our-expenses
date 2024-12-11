@@ -256,7 +256,7 @@ function EditPasswordForm({ onClose, user }) {
             const result = await response.json();
 
             if (!response.ok) {
-                setError(result.message || "Wrong password");
+                setError(result.detail || "Wrong password");
             } else {
                 setError(null);
                 alert("Password changed successfully.");
@@ -338,12 +338,7 @@ function EditUsernameForm({ onClose, user }) {
     const handleUsernameSubmit = async (e) => {
         e.preventDefault();
 
-        setNewUsername(TrimField(newUsername))
-
-        if (newUsername === '') {
-            setError('Username cannot be empty');
-            return;
-        } else if (newUsername.length > MAX_NAME_LENGTH) {
+        if (newUsername.length > MAX_NAME_LENGTH) {
             setError(`Username must be less than ${MAX_NAME_LENGTH} characters`);
             return;
         }
@@ -367,7 +362,7 @@ function EditUsernameForm({ onClose, user }) {
             const result = await response.json();
 
             if (!response.ok) {
-                setError(result.message || "Error editing user");
+                setError(result.detail || "Error editing user");
             } else {
                 setError(null);
                 localStorage.setItem('user', JSON.stringify(result));

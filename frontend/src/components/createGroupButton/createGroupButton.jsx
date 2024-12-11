@@ -19,12 +19,7 @@ function CreateGroupButton() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        setGroupName(TrimField(groupName))
-
-        if (groupName === '') {
-            setError('Group name is required');
-            return;
-        } else if (groupName.length > MAX_NAME_LENGTH) {
+        if (groupName.length > MAX_NAME_LENGTH) {
             setError(`group name must be less than ${MAX_NAME_LENGTH} characters`);
             return;
         }
@@ -43,11 +38,12 @@ function CreateGroupButton() {
                 cache: "no-store",
             });
 
+            result = await response.json();
+
             if (!response.ok) {
-                throw new Error('Error creating the group');
+                throw new Error(result.detail);
             }
 
-            // Reinicia el formulario
             setGroupName('');
             toggleForm();
             alert('Success creating group!');
@@ -73,7 +69,6 @@ function CreateGroupButton() {
                             type="button"
                             onClick={toggleForm}
                             className="btn-close"
-                            
                         >
                             <FontAwesomeIcon icon={faXmark}/>
                         </button>

@@ -73,20 +73,18 @@ function CreatePaymentButton({ users, groupID }) {
 
         const totalPercentage = Object.values(percentagesData).reduce((a, b) => a + b, 0);
 
-        setpaymentDescription(TrimField(paymentDescription));
-
+        if (!paymentCategorySelected || paymentCategorySelected === "default") {
+            setError("You must choose a category");
+            return;
+        }
+            
         if (!userSelected) {
-            setError("You must select a payer");
+            setError("You must choose a payer");
             return;
         }
     
         if (!paymentDate) {
-            setError("You must select a payment date");
-            return;
-        }
-
-        if (!paymentCategorySelected || paymentCategorySelected === "default") {
-            setError("You must choose a category");
+            setError("You must choose a payment date");
             return;
         }
 
@@ -108,8 +106,6 @@ function CreatePaymentButton({ users, groupID }) {
         }, {});
         
         const formattedDate = paymentDate ? format(paymentDate.toDate(), 'yyyy-MM-dd') : '';
-
-        console.log(formattedDate)
 
         const requestBody = {
             payment: {
@@ -137,8 +133,11 @@ function CreatePaymentButton({ users, groupID }) {
                 cache: "no-store",
             });
 
+            let result = await response.json();
+
             if (!response.ok) {
-                setError('Error creating the payment');
+                setError(result.detail || 'Error creating the payment');
+                return;
             }
 
             setpaymentDescription('');

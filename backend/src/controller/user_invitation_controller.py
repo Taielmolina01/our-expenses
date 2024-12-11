@@ -23,7 +23,7 @@ async def create_invitation(invitation: UserInvitationModel,
     except UserAlreadyInvitedToGroup as e:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
     
 @router.get("/invitations/{guest_email}")
 async def get_invitations_by_guest(guest_email: str, 
@@ -34,7 +34,7 @@ async def get_invitations_by_guest(guest_email: str,
     except UserNotRegistered as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
     
 
 @router.get("/invitations/{guest_email}/data")
@@ -46,7 +46,7 @@ async def get_invitations_by_guest_data(guest_email: str,
     except UserNotRegistered as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
     
 @router.delete("/invitations/{invitation_id}/accept")
 async def accept_invitation(invitation_id: int,

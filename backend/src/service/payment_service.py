@@ -35,6 +35,9 @@ class PaymentService:
                        payment: PaymentModel,
                        percentages: dict[str, float]) -> PaymentBase:
         users = await self.user_in_group_service.get_users_by_group(payment.group_id)
+        
+        if not payment.description.strip():
+            raise PaymentWithoutDescription()
 
         if len(percentages) > len(users):
             raise PaymentWithMoreDistributionsThanGroupUsers()
@@ -48,6 +51,9 @@ class PaymentService:
         except ValueError:
             raise PaymentDateIsInvalid()
         
+        if payment.amount <= 0:
+            raise PaymentAmountIsInvalid()
+        
         payment_response = await self.payment_repository.create_payment(create_payment_from_model(payment))
 
         if len(users) == 1:
@@ -60,7 +66,6 @@ class PaymentService:
                 response = await self.user_in_group_service.update_user_in_group(UserInGroupUpdate(user_email=user.email,
                                                                                    group_id=payment.group_id,
                                                                                    balance=userBalanceGroup.balance - payment.amount + percentages[user.email] * payment.amount))
-                print(f"My update payer response: {response}")
             else:
                 if percentages[user.email] != 0.0:
                     debt_response = await self.debt_service.create_debt(DebtModel(payment_id=payment_response.payment_id, 
@@ -68,11 +73,9 @@ class PaymentService:
                                                             debtor_email=user.email, 
                                                             creditor_email=payment.payer_email, 
                                                             percentage=percentages[user.email]))
-                    print(f"My debt response: {debt_response}")
                     update_debtor_response = await self.user_in_group_service.update_user_in_group(UserInGroupUpdate(user_email=user.email,
                                                                                     group_id=payment.group_id,
                                                                                     balance=userBalanceGroup.balance + percentages[user.email] * payment.amount))
-                    print(f"My update debtor response: {update_debtor_response}")
 
         
         return payment_response
@@ -119,6 +122,10 @@ class PaymentService:
         if not registered_payment:
             raise PaymentNotRegistered()
         
+        if payment_update.description is not None:
+            if not payment_update.description.strip():
+                raise PaymentWithoutDescription()
+
         original_percentages = await self.__get_original_percentages(registered_payment)
 
         if payment_update.group_id:

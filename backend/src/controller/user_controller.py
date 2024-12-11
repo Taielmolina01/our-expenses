@@ -24,7 +24,7 @@ async def create_user(user: UserModel,
     except UserWithoutName as e:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
     
 @router.get("/users")
 async def get_users(db: AsyncSession = Depends(get_database)):
@@ -38,7 +38,7 @@ async def get_user(user_email: str,
     except UserNotRegistered as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)        
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
 
 @router.put("/users/{user_email}")
 async def update_user(user_email: str,
@@ -53,7 +53,7 @@ async def update_user(user_email: str,
     except PasswordCanNotBeEmpty as e:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
     
 @router.put("/users/{user_email}/updatepass")
 async def update_pass(user_email: str,
@@ -65,13 +65,13 @@ async def update_pass(user_email: str,
             user_updated = UserUpdate(name=user_pass_update.user.name, password=user_pass_update.newPassword)
             return await UserService(db).update_user(user_email, user_updated)
         else:
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Constraseña incorrecta")
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Wrong password")
     except UserNotRegistered as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except UserWithoutName as e:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
 
 @router.delete("/users/{user_email}")
 async def delete_user(user_email: str, 
@@ -81,4 +81,4 @@ async def delete_user(user_email: str,
     except UserNotRegistered as e:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=e.message)
     except Exception as e:
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Error interno del servidor")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")

@@ -23,7 +23,7 @@ class UserService:
         registered_user = await self.user_repository.get_user(user.email)
         if registered_user:
            raise UserAlreadyRegistered(user.email)
-        if not user.name:
+        if not user.name.strip():
            raise UserWithoutName()
         return await self.user_repository.create_user(create_user_from_model(user))
        
@@ -42,7 +42,7 @@ class UserService:
                     user_update: UserUpdate) -> UserBase:
         user = await self.get_user(user_email)
         if user_update.name is not None:            
-            if user_update.name == "":
+            if not user_update.name.strip():
                 raise UserWithoutName()
             user.name = user_update.name
         if user_update.password is not None:
