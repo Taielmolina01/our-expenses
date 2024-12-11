@@ -1,4 +1,4 @@
-# fronten-we-expenses
+# frontend-we-expenses
 
 ## TO DO
 
