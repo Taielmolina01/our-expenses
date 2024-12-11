@@ -30,7 +30,7 @@ recien ahi instalas dependencias con
 
 `pip install -r requirements.txt`
 
-y ahi corres
+Debes crear un archivo .env con el contenido de .env.mock y luego si correr
 
 `uvicorn main:app --reload`
 
