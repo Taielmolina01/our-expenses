@@ -2,7 +2,9 @@
 
 Proyecto realizado a lo largo de todo el cuatri, en su mayoría realice el código por mi cuenta con mi amigo [Joaco](https://github.com/BA73C0) (siendo que era un tp de a 5)
 
-Me dejó ver la dificultad de montar un proyecto medianamente "grande" (que de todas formas está lejos de serlo)
+Me dejó ver la dificultad de montar una app desde 0 y los problemas que surgen al deployar etc
+
+Me llevo bastantes más aprendizajes desde lo humano que otra cosa de la materia siendo honesto.
 
 ## Features que me gustaría agregar en un futuro
 
