@@ -1,6 +1,6 @@
 # Notas
 
-Proyecto realizado a lo largo de todo el cuatri, en su mayoría realice el código por mi cuenta con mi amigo [Joaco](https://github.com/BA73C0) (siendo que era un tp de a 5)
+Proyecto realizado a lo largo de todo el cuatri, en su mayoría realice el código por mi cuenta con mi amigo [Joaco](https://github.com/BA73C0)
 
 Me dejó ver la dificultad de montar una app desde 0 y los problemas que surgen al deployar etc
 
